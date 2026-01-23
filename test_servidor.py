@@ -36,6 +36,8 @@ class TestSimpleHTTPServer(unittest.TestCase):
         self.assertIn("<h1>Hola desde un servidor Python</h1>", response.text)
         self.assertIn("<p>Este es un servidor simple que responde a solicitudes GET.</p>", response.text)
         self.assertIn("<p>Web del grupo A todo DAS</p>", response.text)
+        etiqueta = '<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg">'
+        self.assertIn(etiqueta, response.text)
 
 
 if __name__ == '__main__':
